@@ -1,18 +1,18 @@
 ## Portfolio-Website
-Portfolio website build using HTML-CSS-JS and Flask-Bootstrap5
+Portfolio website build using  Flask-Bootstrap5
 
-#### HTML-CSS-JS based portfolio Link:
+#### Flask-Bootstrap5 based portfolio Link:
 
 <a href="https://skpaul.netlify.app/" target="_blank">**Visit Now** 🚀</a>
 
-# How to Deploy myportfolio on Kubernetes
+# How to Deploy My Portfolio on any Host
 
 ~~~
 rm -rf skpaul.info
-git clone https://github.com/SumonPaul18/skpaul.info.git
+git clone -b skpaul.info-flask-bs5-portfolio --depth 1 https://github.com/SumonPaul18/skpaul.info.git
 cd skpaul.info
-kubectl apply -f skpaul-info-deploy.yaml
-kubectl get deploy,pv,pvc,pod,svc
+pip install -r requirements.txt
+python app.py
 ~~~
 
 ### Access The Nginx Instance
