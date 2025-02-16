@@ -49,5 +49,5 @@ def send_email():
             return render_template('index.html', config=config, message_error=True) # এরর মেসেজের জন্য ভেরিয়েবল পাঠান
     return redirect(url_for('index'))
 
-if __name__ == '__main__':
-    app.run(debug=True)
+#if __name__ == '__main__':
+#    app.run(debug=True)
