@@ -5,7 +5,7 @@ Portfolio website build using  Flask-Bootstrap5
 
 <a href="https://skpaul.netlify.app/" target="_blank">**Visit Now** 🚀</a>
 
-# How to Deploy myportfolio on Kubernetes
+# How to Deploy My Portfolio on any Host
 
 ~~~
 rm -rf skpaul.info
