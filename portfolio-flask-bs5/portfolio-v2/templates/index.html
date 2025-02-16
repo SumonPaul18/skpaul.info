@@ -1,0 +1,204 @@
+{% extends 'base.html' %}
+
+{% block title %}Portfolio - {{ config.name }}{% endblock %}
+
+{% block content %}
+
+    <section id="hero" class="hero-section py-5 mt-5"></section>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <h1 class="display-4">{{ config.hero.title }}</h1>
+                    <p class="lead">{{ config.hero.intro }}</p>
+                    <p class="description">{{ config.hero.description }}</p>
+                    <div class="social-links mt-4">
+                        {% if config.social.linkedin %}
+                        <a href="{{ config.social.linkedin }}" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        {% endif %}
+                        {% if config.social.github %}
+                        <a href="{{ config.social.github }}" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                        {% endif %}
+                        {% if config.social.twitter %}
+                        <a href="{{ config.social.twitter }}" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        {% endif %}
+                    </div>
+                    <div class="buttons mt-4">
+                        <a href="{{ config.hero.resume_link }}" class="btn btn-primary">Resume</a>
+                        <a href="#contact" class="btn btn-outline-light">Hire Me</a>
+                    </div>
+                </div>
+                <div class="col-md-6 text-center">
+                    <img src="{{ config.image }}" alt="{{ config.name }}" class="profile-image rounded-circle img-fluid mb-3">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-4">{{ config.about.title }}</h2>
+            <p class="section-description">{{ config.about.description }}</p>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-4">{{ config.skills.title }}</h2>
+            <div class="row">
+                {% for skill in config.skills.skills_list %}
+                <div class="col-md-4 mb-3">
+                    <div class="card skill-card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ skill.name }}</h5>
+                            <p class="card-text">{{ skill.details }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section id="experience" class="experience-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-4">{{ config.experience.title }}</h2>
+            <div class="timeline">
+                {% for exp in config.experience.experiences_list %}
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>{{ exp.position }}</h3>
+                        <p class="company">{{ exp.company }}</p>
+                        <p class="duration">{{ exp.duration }}</p>
+                        <p>{{ exp.description }}</p>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-4">{{ config.projects.title }}</h2>
+            <div class="row">
+                {% for project in config.projects.projects_list %}
+                <div class="col-md-4 mb-4">
+                    <div class="card project-card h-100">
+                        <img src="{{ project.image }}" class="img-fluid rounded-start" alt="{{ project.name }}">
+                        <div class="card-body d-flex flex-column">
+                            <h5 class="card-title">{{ project.name }}</h5>
+                            <p class="card-text">{{ project.description }}</p>
+                            <div class="mt-auto">
+                                <a href="{{ project.explore_link }}" class="btn btn-primary">Explore</a>
+                                <a href="{{ project.code_link }}" target="_blank" class="btn btn-secondary">View Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section id="certification" class="certification-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-4">{{ config.certification.title }}</h2>
+            <div class="row">
+                {% for cert in config.certification.certifications_list %}
+                <div class="col-md-6 mb-3">
+                    <div class="card certification-card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ cert.name }}</h5>
+                            <p class="card-text">{{ cert.authority }} - {{ cert.date }}</p>
+                            <a href="{{ cert.certificate_link }}" class="btn btn-primary">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section id="education" class="education-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-4">{{ config.education.title }}</h2>
+            <div class="row">
+                {% for edu in config.education.educations_list %}
+                <div class="col-md-6 mb-3">
+                    <div class="card education-card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ edu.institution }}</h5>
+                            <p class="card-text">{{ edu.degree }} - {{ edu.duration }}</p>
+                            <p class="card-text">{{ edu.description }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section id="collaboration" class="collaboration-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-4">{{ config.collaboration.title }}</h2>
+            <p class="section-description">{{ config.collaboration.description }}</p>
+        </div>
+    </section>
+
+    <section id="blogs" class="blogs-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-4">{{ config.blogs.title }}</h2>
+            <div class="row">
+                {% for blog in config.blogs.blogs_list %}
+                <div class="col-md-4 mb-3">
+                    <div class="card blog-card">
+                        <div class="card-body">
+                            <h5 class="card-title">{{ blog.title }}</h5>
+                            <a href="{{ blog.link }}" class="btn btn-primary">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-4">{{ config.contact.title }}</h2>
+            <p class="section-description text-center">{{ config.contact.description }}</p>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <form id="contactForm" action="{{ url_for('send_email') }}" method="post">
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" name="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="email" name="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                        </div>
+                        <div class="d-grid">
+                            <button type="submit" class="btn btn-primary">Send Message</button>
+                        </div>
+                        <div id="form-message-success" class="alert alert-success mt-3 d-none" role="alert">
+                            Your message has been sent successfully!
+                        </div>
+                        <div id="form-message-error" class="alert alert-danger mt-3 d-none" role="alert">
+                            There was an error sending your message. Please try again.
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="contact-info text-center mt-5">
+                <p><i class="fas fa-envelope"></i> Email: <a href="mailto:{{ config.contact.email }}">{{ config.contact.email }}</a></p>
+                <p><i class="fas fa-phone"></i> Phone: {{ config.contact.phone }}</p>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

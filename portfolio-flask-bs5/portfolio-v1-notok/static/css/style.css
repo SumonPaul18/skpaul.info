@@ -1,0 +1,110 @@
+/* Base Styles */
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Gradient Text Effect */
+.gradient-text {
+    background: linear-gradient(45deg, #6a11ff, #2575fc);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: gradient-shift 5s infinite alternate;
+}
+
+/* Profile Image Effects */
+.profile-container {
+    max-width: 500px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.profile-img {
+    position: relative;
+    z-index: 2;
+    border: 3px solid rgba(255,255,255,0.1);
+    border-radius: 1rem;
+}
+
+.profile-glow {
+    position: absolute;
+    inset: -15px;
+    background: linear-gradient(45deg, #6a11ff, #2575fc);
+    border-radius: 1rem;
+    filter: blur(50px);
+    opacity: 0.3;
+    z-index: 1;
+    animation: glow-pulse 2s infinite alternate;
+}
+
+/* Timeline Design */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, #6a11ff, #2575fc);
+}
+
+.timeline-item {
+    position: relative;
+    margin-left: 30px;
+    padding: 2rem;
+    background: rgba(255,255,255,0.03);
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+
+.timeline-item.visible {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.timeline-date {
+    position: absolute;
+    left: -150px;
+    top: 25px;
+    color: #6a11ff;
+    font-weight: bold;
+}
+
+/* Hover Effects */
+.hover-lift {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(106,17,255,0.2);
+}
+
+/* Animations */
+@keyframes gradient-shift {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+@keyframes glow-pulse {
+    0% { opacity: 0.2; }
+    100% { opacity: 0.4; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .profile-glow { display: none; }
+    .timeline::before { left: -15px; }
+    .timeline-date { position: static; }
+    .timeline-item { padding: 1.5rem; }
+}

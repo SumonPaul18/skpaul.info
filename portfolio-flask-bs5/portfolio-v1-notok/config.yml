@@ -1,0 +1,42 @@
+hero:
+  title: "Hi, I'm John Doe"
+  intro: "DevOps Engineer | Cloud Specialist | CI/CD Expert"
+  image: "static/images/profile.png"
+  buttons:
+    hire_me: "#contact"
+    resume: "/resume.pdf"
+
+social_links:
+  - name: GitHub
+    icon: fab fa-github
+    url: "#"
+  - name: LinkedIn
+    icon: fab fa-linkedin
+    url: "#"
+
+about:
+  text: "Experienced DevOps engineer with 5+ years in cloud infrastructure..."
+
+skills:
+  categories:
+    - name: Cloud
+      items: [AWS, GCP, Azure]
+    - name: CI/CD
+      items: [Jenkins, GitLab CI, CircleCI]
+
+projects:
+  - title: "CI/CD Pipeline Automation"
+    image: "project1.jpg"
+    description: "Automated deployment pipeline using Jenkins"
+    links:
+      live: "#"
+      code: "#"
+
+experience:
+  - company: "Tech Corp"
+    role: "Senior DevOps Engineer"
+    duration: "2020-Present"
+    description: "Led cloud migration projects..."
+
+contact:
+  email: "contact@example.com"

@@ -1,0 +1,437 @@
+/* static/css/style.css */
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #495057; /* Slightly darker, professional text color */
+    background-color: #f8f9fa; /* Light gray background */
+    line-height: 1.7; /* Improved line height for readability */
+}
+
+.header {
+    background-color: #343a40; /* Dark background for header */
+}
+
+.navbar-brand {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.8); /* Softer white navigation links */
+    padding: 0.75rem 1rem;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover,
+.navbar-dark .navbar-nav .nav-link:focus {
+    color: rgba(255, 255, 255, 1); /* Brighter white on hover/focus */
+}
+
+.footer {
+    background-color: #e9ecef; /* Light gray footer background */
+    color: #6c757d; /* Gray footer text */
+}
+
+.container {
+    max-width: 1200px; /* Wider container for larger screens */
+}
+
+.section-title {
+    color: #007bff; /* Primary blue color */
+    margin-bottom: 2rem; /* Increased bottom margin */
+    font-weight: bold;
+    font-size: 2.5rem; /* Larger section titles */
+}
+
+.section-description {
+    color: #6c757d; /* Gray section description text */
+    margin-bottom: 3rem; /* Increased bottom margin */
+    font-size: 1.1rem; /* Slightly larger font size */
+}
+
+/* Hero Section Styles */
+.hero-section {
+    background-color: #f1f3f5; /* Slightly lighter hero background */
+    padding-top: 8rem; /* Increased padding */
+    padding-bottom: 6rem;
+}
+
+.profile-image {
+    width: 180px; /* Slightly larger profile image */
+    height: 180px;
+    object-fit: cover;
+    border: 5px solid #fff; /* White border */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    margin-bottom: 1.5rem;
+    margin-top: 2rem;
+}
+
+.hero-section .display-4 {
+    font-size: 3.5rem; /* Larger hero title */
+    font-weight: bold;
+    color: #343a40; /* Darker title color */
+    margin-bottom: 0.5rem;
+}
+
+.hero-section .lead {
+    font-size: 1.25rem;
+    color: #6c757d;
+}
+
+.hero-section .description {
+    margin-top: 1rem;
+    font-size: 1.1rem;
+}
+
+.social-links {
+    margin-top: 2rem;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 45px; /* Slightly larger social icons */
+    height: 45px;
+    border-radius: 50%;
+    background-color: #007bff; /* Primary blue */
+    color: white;
+    margin: 0 8px; /* Increased spacing */
+    font-size: 20px; /* Larger icon size */
+    text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Smooth transition */
+}
+
+.social-icon:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: scale(1.1); /* Slightly scale up on hover */
+}
+
+.buttons {
+    margin-top: 2.5rem;
+}
+
+.btn-primary {
+    font-size: 1.1rem;
+    padding: 0.8rem 2rem;
+    border-radius: 0.3rem;
+}
+
+.btn-outline-light {
+    font-size: 1.1rem;
+    padding: 0.8rem 2rem;
+    border-radius: 0.3rem;
+}
+
+/* About Section Styles */
+.about-section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: #fff; /* White background for about section */
+}
+
+/* Skills Section Styles */
+.skills-section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: #f8f9fa; /* Light gray background for skills */
+}
+
+.skill-card {
+    border: none; /* Remove default border */
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05); /* Softer shadow */
+    transition: transform 0.3s ease;
+    background-color: #fff; /* White card background */
+}
+
+.skill-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.1); /* Deeper shadow on hover */
+}
+
+.skill-card .card-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 0.5rem;
+}
+
+.skill-card .card-text {
+    color: #6c757d;
+}
+
+/* Experience Section Styles */
+.experience-section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: #fff; /* White background for experience */
+}
+
+.timeline {
+    position: relative;
+    padding: 2rem 0;
+}
+
+.timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background-color: #007bff; /* Primary blue timeline line */
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    margin-bottom: 2.5rem; /* Increased item spacing */
+    position: relative;
+}
+
+.timeline-content {
+    width: 46%; /* Slightly wider content area */
+    padding: 1.5rem;
+    background-color: #fff; /* White timeline content background */
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08); /* Softer shadow */
+    border: 1px solid #e0e0e0; /* Light gray border */
+    transition: transform 0.3s ease;
+}
+
+.timeline-content:hover {
+    transform: scale(1.02); /* Slightly scale up on hover */
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.1); /* Deeper shadow on hover */
+}
+
+.timeline-item:nth-child(odd) .timeline-content {
+    left: 5%;
+    text-align: left;
+}
+
+.timeline-item:nth-child(even) .timeline-content {
+    left: auto;
+    right: 5%;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) .timeline-content::before {
+    right: -10px; /* Adjusted arrow position */
+    border-left: 10px solid #fff; /* White arrow */
+    border-right: 0;
+}
+
+.timeline-item:nth-child(odd) .timeline-content::before {
+    left: -10px; /* Adjusted arrow position */
+    border-right: 10px solid #fff; /* White arrow */
+    border-left: 0;
+}
+
+
+.timeline-content::before {
+    content: '';
+    position: absolute;
+    top: 1rem; /* Adjusted arrow position */
+    width: 0;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+.timeline-content h3 {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 0.3rem;
+}
+
+.timeline-content .company {
+    font-style: italic;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content .duration {
+    color: #007bff; /* Primary blue duration text */
+    font-weight: bold;
+    margin-bottom: 0.8rem;
+}
+
+/* Projects Section Styles */
+.projects-section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: #f8f9fa; /* Light gray background for projects */
+}
+
+.project-card {
+    border: none; /* Remove default border */
+    border-radius: 0.75rem; /* More rounded corners */
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.08); /* Softer shadow */
+    overflow: hidden; /* Clip content for rounded corners */
+    transition: transform 0.3s ease;
+    background-color: #fff; /* White card background */
+}
+
+.project-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.12); /* Deeper shadow on hover */
+}
+
+.project-card img {
+    border-top-left-radius: 0.75rem;
+    border-top-right-radius: 0.75rem;
+    height: 220px; /* Fixed image height for consistency */
+    object-fit: cover; /* Cover container, crop if necessary */
+}
+
+.project-card .card-body {
+    padding: 1.5rem;
+}
+
+.project-card .card-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 0.7rem;
+}
+
+.project-card .card-text {
+    color: #6c757d;
+    margin-bottom: 1rem;
+}
+
+.project-buttons {
+    margin-top: 1rem;
+}
+
+.project-buttons .btn {
+    margin-right: 0.5rem;
+    font-size: 1rem;
+    padding: 0.6rem 1.5rem;
+    border-radius: 0.3rem;
+}
+
+/* Certification Section Styles */
+.certification-section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: #fff; /* White background for certification */
+}
+
+.certification-card {
+    border: none; /* Remove default border */
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05); /* Softer shadow */
+    transition: transform 0.3s ease;
+    background-color: #f8f9fa; /* Light gray card background */
+}
+
+.certification-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.1); /* Deeper shadow on hover */
+}
+
+.certification-card .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 0.3rem;
+}
+
+.certification-card .card-text {
+    color: #6c757d;
+    margin-bottom: 0.7rem;
+}
+
+/* Education Section Styles */
+.education-section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: #f8f9fa; /* Light gray background for education */
+}
+
+.education-card {
+    border: none; /* Remove default border */
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05); /* Softer shadow */
+    transition: transform 0.3s ease;
+    background-color: #fff; /* White card background */
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.1); /* Deeper shadow on hover */
+}
+
+.education-card .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 0.3rem;
+}
+
+.education-card .card-text {
+    color: #6c757d;
+    margin-bottom: 0.7rem;
+}
+
+/* Collaboration Section Styles */
+.collaboration-section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: #fff; /* White background for collaboration */
+}
+
+/* Blogs Section Styles */
+.blogs-section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: #f8f9fa; /* Light gray background for blogs */
+}
+
+.blog-card {
+    border: none; /* Remove default border */
+    border-radius: 0.5rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05); /* Softer shadow */
+    transition: transform 0.3s ease;
+    background-color: #fff; /* White card background */
+}
+
+.blog-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.75rem 1.5rem rgba(0, 0, 0, 0.1); /* Deeper shadow on hover */
+}
+
+.blog-card .card-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #343a40;
+    margin-bottom: 0.3rem;
+}
+
+/* Contact Section Styles */
+.contact-section {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    background-color: #fff; /* White background for contact */
+}
+
+.contact-info {
+    margin-bottom: 2rem;
+}
+
+.contact-info p {
+    font-size: 1.1rem;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+}
+
+.contact-info a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}

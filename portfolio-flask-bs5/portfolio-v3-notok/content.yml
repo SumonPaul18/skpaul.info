@@ -1,0 +1,63 @@
+# data/content.yml
+title: "DevOps Engineer Portfolio"
+footer:
+  year: 2024
+  name: "Your Name"
+
+hero:
+  title: "Your Name"
+  intro: "DevOps Engineer | Cloud Enthusiast | Automation Expert"
+  image: "profile.jpg"
+  social:
+    - icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/yourprofile"
+    - icon: "fab fa-github"
+      url: "https://github.com/yourgithub"
+  resume_url: "/static/files/resume.pdf"
+
+about:
+  content: "A brief introduction about you and your journey as a DevOps Engineer."
+
+skills:
+  - name: "AWS"
+    description: "Expertise in AWS cloud services."
+  - name: "Docker"
+    description: "Proficient in containerization using Docker."
+  - name: "Kubernetes"
+    description: "Experience in orchestrating containers with Kubernetes."
+
+projects:
+  - name: "CI/CD Pipeline"
+    image: "images/project1.jpg"
+    description: "Automated CI/CD pipeline using Jenkins and Kubernetes."
+    explore_url: "#"
+    code_url: "https://github.com/yourrepo"
+  - name: "Infrastructure as Code"
+    image: "images/project2.jpg"
+    description: "Managed infrastructure using Terraform."
+    explore_url: "#"
+    code_url: "https://github.com/yourrepo"
+
+experience:
+  - title: "DevOps Engineer"
+    company: "Tech Company"
+    dates: "2020 - Present"
+    description: "Managed and automated cloud infrastructure."
+  - title: "System Administrator"
+    company: "Old Company"
+    dates: "2018 - 2020"
+    description: "Managed servers and network infrastructure."
+
+education:
+  - degree: "Bachelor of Science in Computer Science"
+    institution: "University Name"
+    dates: "2014 - 2018"
+    description: "Relevant coursework in cloud computing and automation."
+
+certifications:
+  - name: "AWS Certified DevOps Engineer"
+    authority: "Amazon Web Services"
+    url: "#"
+  - name: "Certified Kubernetes Administrator"
+    authority: "CNCF"
+    url: "#"
