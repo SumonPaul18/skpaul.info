@@ -9,7 +9,7 @@ Portfolio website build using  Flask-Bootstrap5
 
 ~~~
 rm -rf skpaul.info
-git clone -b skpaul.info-flask-bs5-portfolio --depth 1 https://github.com/SumonPaul18/skpaul.info.git
+git clone https://github.com/SumonPaul18/skpaul.info.git
 cd skpaul.info
 pip install -r requirements.txt
 python app.py
