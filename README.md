@@ -7,7 +7,7 @@ Portfolio website build using HTML5, CSS3, JavaScript and jQuery.
 
 ~~~
 rm -rf skpaul.info
-git clone https://github.com/SumonPaul18/skpaul.info.git
+git clone -b HCJ --depth 1 https://github.com/SumonPaul18/skpaul.info.git
 cd skpaul.info
 kubectl apply -f skpaul-info-deploy.yaml
 kubectl get deploy,pv,pvc,pod,svc
