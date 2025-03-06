@@ -6,9 +6,9 @@ image: "static/images/profile.png" # Your profile image
 intro: "An experienced DevOps Engineer skilled in automation, cloud technologies, and infrastructure management."
 
 social:
-  linkedin: "https://www.linkedin.com/in/yourlinkedinprofile/"
-  github: "https://github.com/yourgithubusername"
-  twitter: "https://twitter.com/yourtwitterusername"
+  linkedin: "https://www.linkedin.com/in/sumonpaul"
+  github: "https://github.com/sumonpaul18"
+  twitter: "https://x.com/sumon_paul25"
 
 hero:
   title: "I'm Sumon Paul"
@@ -25,13 +25,13 @@ skills:
   skills_list:
     - name: "Cloud Platforms"
       details: "AWS, Azure, GCP"
-      logo: "static/img/aws.png" # Example logo, you'll need to add images
+      logo: "static/images/aws.png" # Example logo, you'll need to add images
     - name: "Containerization"
       details: "Docker, Kubernetes"
-      logo: "static/img/docker.png" # Example logo
+      logo: "static/images/docker.png" # Example logo
     - name: "Automation"
       details: "Ansible, Terraform, Jenkins"
-      logo: "static/img/ansible.png" # Example logo
+      logo: "static/images/ansible.png" # Example logo
 
 experience:
   title: "Experience"
