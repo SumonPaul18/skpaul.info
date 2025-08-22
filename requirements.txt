@@ -1,5 +1,0 @@
-Flask
-PyYAML
-python-dotenv
-Bootstrap-Flask
-gunicorn
