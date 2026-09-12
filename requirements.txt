@@ -3,3 +3,7 @@ PyYAML
 python-dotenv
 Bootstrap-Flask
 gunicorn
+#flask-markdown
+markdown
+bleach
+requests

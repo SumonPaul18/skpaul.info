@@ -2,10 +2,15 @@ from flask import Flask, render_template, request, redirect, url_for, jsonify
 import yaml
 import os
 from dotenv import load_dotenv
+import markdown  # <-- এখানে ছোট হাতের 'm' ব্যবহার করতে হবে
 
 load_dotenv()
 
 app = Flask(__name__)
+
+@app.template_filter('markdown')
+def markdown_filter(text):
+    return markdown.markdown(text, extensions=['fenced_code', 'tables'])
 
 def load_config():
     config_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'config.yml')
